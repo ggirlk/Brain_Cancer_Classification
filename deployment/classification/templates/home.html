@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+
+
+</head>
+<body>
+	
+	<header class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5 header-logo">
+					<br>
+                    
+					<a href="home.html"><img src="{% static 'images/logo.png' %}" alt="" class="img-responsive logo"></a>
+				</div>
+
+				<div class="col-md-7">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid nav-bar">
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					      <ul class="nav navbar-nav navbar-right">
+					        <li><a class="menu active" href="#home" >Home</a></li>
+					        <li><a class="menu" href="#service">our project </a></li>
+					        <li><a class="menu" href="#team">our team</a></li>
+					        <li><a class="menu" href="#contact"> test</a></li>
+					      </ul>
+					    </div>
+					  </div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header> 
+
+	<section class="slider" id="home">
+		<div class="container-fluid">
+			<div class="row">
+			    <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel"></div>
+					<div class="header-backup"></div>
+			        <div class="carousel-inner" role="listbox">
+			            <div class="item active">
+			            	<img src="{% static 'images/slide.jpg' %}" alt="">
+			                <div class="carousel-caption">
+		               			<h1> tumor</h1>
+		               			<p>detection With quantum machine learning</p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</section><!-- end of slider section -->
+	<!-- service section starts here -->
+	<section class="service text-center" id="service">
+		<div class="container">
+				<h2>our project</h2>
+				<h4>Brain cancer detection with a quantum hybrid classical model
+					<br> for our portfolio project in Holberton
+				</h4>
+				<div class="col-md col-sm center">
+					<div class="single-service center">
+						<div class="single-service-img center">
+							<div class="service-img center">
+								<img class="brain img-responsive center" src="{% static 'images/service.png' %}" >
+							</div>
+						</div>
+						<h3><a href="https://laabidigh.medium.com/">Blogpost</a></h3>
+					</div>
+				</div>
+		</div>
+	</section>
+
+	<!-- team section -->
+	<section class="team" id="team">
+		<div class="container">
+			<div class="row">
+				<div class="team-heading text-center">
+					<h2>our team</h2>
+					<h4></h4>
+				</div>
+				<div class="col-md-2 single-member col-sm-6">
+					<div class="person">
+						<img class="img-responsive" src="{% static 'images/member1.jpg' %}" alt="member-1">
+					</div>
+					<div class="person-detail">
+						<div class="arrow-bottom"></div>
+						<h3>Mouhamed Charfi</h3>
+						<p>Machine learning specialist</p>
+					</div>
+				</div>
+				<div class="col-md-2 single-member col-sm-6"></div>
+				<div class="col-md-2 single-member col-sm-6">
+					<div class="person">
+						<img class="img-responsive" src="{% static 'images/member2.jpg' %}" alt="member-3">
+					</div>
+					<div class="person-detail">
+						<div class="arrow-bottom"></div>
+						<h3>Ghofrane Abidi</h3>
+						<p>Machine learning specialist</p>
+					</div>
+				</div>
+				<div class="col-md-2 single-member col-sm-6"></div>
+				<div class="col-md-2 single-member col-sm-4">
+					<div class="person">
+						<img class="img-responsive" src="{% static 'images/member4.jpg' %}" alt="member-5">
+					</div>
+					<div class="person-detail">
+						<div class="arrow-bottom"></div>
+						<h3>khouloud Al Khammassi</h3>
+						<p>Machine learning specialist</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="api-map" id="contact">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 map" id="map"></div>
+			</div>
+		</div>
+	</div>
+	<section class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-caption clearfix">
+					<div class="contact-heading text-center">
+						<h2>Test the MRI</h2>
+					</div>
+					
+					<div class="col-md-6 col-md-offset-1 contact-form">
+						<h3> upload an MRI of the brain</h3>
+
+						<form class="form" action="{% url 'result' %}">
+							<input type="file"
+								id="avatar" name="avatar"  placeholder="Message"
+								accept="image/png, image/jpeg">
+							<input class="submit-btn" type="submit" value="CHECK">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+	<footer class="footer clearfix"> 
+	</footer>
+
+</body>
+</html>
