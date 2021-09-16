@@ -57,7 +57,7 @@ package  to store huge amounts of numerical data, and easily manipulate that dat
 - cv2(openCv)
 
 ## architecture
-![plot](./architecture.png)
+![plot](./model.jpg)
 
 ## Bugs
 No known bugs at this time. 
