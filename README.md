@@ -11,6 +11,8 @@ Brain Tunor Detection is a development of a website linked to a quantum network.
 ## Table of Content
 * [Environment](#environment)
 * [Installation](#installation)
+* [Technology](#Technology)
+* [library](#library)
 * [Bugs](#bugs)
 * [Authors](#authors)
 * [License](#license)
@@ -24,7 +26,27 @@ This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.
 * Run the command: `python manage.py runserver`
 * Browse your X-ray  and wait for the result
 
+## Technology
+```
+* Quantum computing
+Our project we chose to work with quantum computing, a new but efficient technology, with a high precision rate.
 
+* Python / Django
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design
+```
+
+## library
+- Qiskit:
+ is an open-source software development kit  SDK for working with quantum computers
+- pennylane 
+PennyLane is a cross-platform Python library for quantum machine learning
+-  Tensorflow
+TensorFlow is an end-to-end open source platform for machine learning.
+- datetime 
+module supplies classes for manipulating dates and times.
+- h5py
+package  to store huge amounts of numerical data, and easily manipulate that data from NumPy
+- cv2(openCv)
 
 ## Bugs
 No known bugs at this time. 
