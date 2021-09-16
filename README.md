@@ -1,2 +1,2 @@
-# Portfolio Project: Brain Cancer classification using a hybrid quantum Classifical model<🧠|1>
+# Portfolio Project: Brain Cancer classification using a hybrid quantum Classical model<🧠|1>
 
