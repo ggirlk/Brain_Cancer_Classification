@@ -1,4 +1,4 @@
-# Portfolio Project: Brain Cancer classification using a hybrid quantum Classical model <🧠|1>
+# ![](https://github.com/ggirlk/holbertonschool-machine_learning/blob/master/holberton-logo.png?raw=true) Portfolio Project: Brain Cancer Classification with QML <🧠|1>
 
 Brain Tunor Detection is a development of a website linked to a quantum network. The goal of our project is to eventually deploy on our server a link with a neuronal network developed that helps it to detect the major types of tumor, analyzed and provide it with the result. 
 
@@ -44,8 +44,6 @@ Django is a high-level Python web framework that encourages rapid development an
 
 
 ## library
-- Qiskit:
- is an open-source software development kit  SDK for working with quantum computers
 - pennylane 
 PennyLane is a cross-platform Python library for quantum machine learning
 -  Tensorflow
@@ -57,18 +55,31 @@ package  to store huge amounts of numerical data, and easily manipulate that dat
 - cv2(openCv)
 
 ## architecture
-![plot](./model.jpg)
+![plot](Model.jpg)
 
 ## Bugs
 No known bugs at this time. 
 
-## Authors
-- Mouhamed charfi - [Github](https://github.com/medcharfi96) / [Twitter](https://twitter.com/mouhamedcharfi)
-- Ghofrane laabidi - [Github](https://github.com/anaruzz) / [Twitter](https://twitter.com/)
-- Khouloud khammesi - [Github](https://github.com/ggirlk) / [Twitter](https://twitter.com/)
+## Resources
+[- CNN](https://www.researchgate.net/publication/331540139_A_State-of-the-Art_Survey_on_Deep_Learning_Theory_and_Architectures/figures?lo=1&utm_source=google&utm_medium=organic)
+<br>
+[- QCNN](https://arxiv.org/pdf/2009.09423.pdf)
+<br>
+[- Pennylane tutorial](https://pennylane.ai/qml/demos/tutorial_quanvolution.html?fbclid=IwAR3Sw-OvDokiY1bzltvyyLHnnlPvlVTnAiwH3HqjTYpLxnjSbibGBfaSmTA)
+<br>
+[- Pennylane](https://pennylane.ai/)
+<br>
+[- Qiskit](https://qiskit.org/)
+<br>
+[- Quantum Computing Concepts – Entanglement](https://www.youtube.com/watch?v=EjdIMBOWCWo)
+<br>
 
 
 ## License
 Public Domain. No copy write protection. 
+
+<hr>
+
+By [Khouloud](https://www.linkedin.com/in/khouloud-alkhammassi-3a9078129), [Ghofrane](https://github.com/anaruzz) and [Mouhamed](https://github.com/medcharfi96) Software engineers at [HolbertonSchool®️](https://www.holbertonschool.com)
 
 
