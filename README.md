@@ -1,6 +1,9 @@
 # ![](https://github.com/ggirlk/holbertonschool-machine_learning/blob/master/holberton-logo.png?raw=true) Portfolio Project: Brain Cancer Classification with QML <🧠|1>
 
-Brain Tunor Detection is a development of a website linked to a quantum network. The goal of our project is to eventually deploy on our server a link with a neuronal network developed that helps it to detect the major types of tumor, analyzed and provide it with the result. 
+![](goal.png)
+
+## 🤖 Intro
+Brain Tumor Detection is a development of a website linked to a quantum network. The goal of our project is to eventually deploy on our server a link with a neuronal network developed that helps it to detect the major types of tumor, analyzed and provide it with the result. 
 
 ## Functionalities of this application:
 * Retrieve patient X-ray image
