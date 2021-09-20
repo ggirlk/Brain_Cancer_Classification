@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+class brain_MRI(models.Model):
+    MRI_image = models.ImageField(upload_to='media/images/')

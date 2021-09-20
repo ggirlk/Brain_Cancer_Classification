@@ -62,7 +62,7 @@
 	<section class="service text-center" id="service">
 		<div class="container">
 				<h2>our project</h2>
-				<h4>Brain cancer detection with a quantum hybrid classical model
+				<h4>Brain cancer classification with a quantum hybrid classical model
 					<br> for our portfolio project in Holberton
 				</h4>
 				<div class="col-md col-sm center">
@@ -140,12 +140,15 @@
 					<div class="col-md-6 col-md-offset-1 contact-form">
 						<h3> upload an MRI of the brain</h3>
 
-						<form class="form" action="{% url 'result' %}">
+						<form class="form" action="{% url 'MRI' %}" method = "post" enctype="multipart/form-data" >
+							{% csrf_token %} 
+							{{ form.as_p }} 
 							<input type="file"
 								id="avatar" name="avatar"  placeholder="Message"
 								accept="image/png, image/jpeg">
 							<input class="submit-btn" type="submit" value="CHECK">
 						</form>
+						
 					</div>
 				</div>
 			</div>
