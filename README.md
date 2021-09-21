@@ -10,31 +10,24 @@ Our Solution is about Brain Cancer Classification that means Classifying differe
 
 ![](Model.jpg)
 
-## Functionalities of this application:
+## 👉 Process:
 * Retrieve patient MRI image
 * Process the image
 * predict the result and display it
 * Update the database 
 
-## Table of Content
-* [Environment](#environment)
-* [Installation](#installation)
-* [Technologies](#Technology)
-* [Bugs](#bugs)
-* [License](#license)
-
-## Environment
+## 👉 Environment
 This project is interpreted/tested on Ubuntu 20.04.3 LTS using python3 (V 3.8.3)
 
 
-## Installation
+## 👉 Installation
 * Clone this repository: `git clone "https://github.com/ggirlk/Brain_Cancer_Classification.git"`
 * Access deployment directory: `cd deployment`
 * Run the command: `python manage.py runserver`
-* Browse your X-ray  and wait for the result
+* Browse your MRI  and wait for the result
 
-## Technologies
-
+## 👉 Technologies
+#### Modeling:
 - Pennylane: Quantum Machine Learning Tool.
 - Tensorflow: Classical Machine Learning Tool.
 - OpenCv (cv2): Image Processing Tool.
@@ -43,10 +36,13 @@ This project is interpreted/tested on Ubuntu 20.04.3 LTS using python3 (V 3.8.3)
 - Scikit-Learn (sklearn): Classical Machine Learning Tool.
 - Matplotlib: Plotting Tool.
 
-## Bugs
+#### Web App
+- Django: Python Web Framework.
+
+## 👉 Bugs
 No known bugs at this time. 
 
-## Resources
+## 👉 Resources
 [- CNN](https://www.researchgate.net/publication/331540139_A_State-of-the-Art_Survey_on_Deep_Learning_Theory_and_Architectures/figures?lo=1&utm_source=google&utm_medium=organic)
 <br>
 [- QCNN](https://arxiv.org/pdf/2009.09423.pdf)
