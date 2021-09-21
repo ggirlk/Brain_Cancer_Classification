@@ -3,11 +3,16 @@
 ![](goal.png)
 
 ## 🤖 Intro
-Brain Tumor Detection is a development of a website linked to a quantum network. The goal of our project is to eventually deploy on our server a link with a neuronal network developed that helps it to detect the major types of tumor, analyzed and provide it with the result. 
+
+>> Our project is a work of three teammates, manchened at the end of this document.
+We've used a new method Called Hybrid Quantum-Classical Model which is a mixe between Quantum Circuits used as Neural Network and a Classical Neural Network,
+Our Solution is about Brain Cancer Classification that means Classifying different Tumor types from MRI pictures so a Convolutional Neural Network is a normal method but here we did it with an Hybrid Quantum ConvNet as designed above:
+
+![](Model.jpg)
 
 ## Functionalities of this application:
-* Retrieve patient X-ray image
-* Analyze the image and do some operations on it
+* Retrieve patient MRI image
+* Process the image
 * predict the result and display it
 * Update the database 
 
@@ -22,7 +27,7 @@ Brain Tumor Detection is a development of a website linked to a quantum network.
 * [License](#license)
 
 ## Environment
-This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+This project is interpreted/tested on Ubuntu 20.04.3 LTS using python3 (V 3.8.3)
 
 
 ## Installation
@@ -31,34 +36,15 @@ This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.
 * Run the command: `python manage.py runserver`
 * Browse your X-ray  and wait for the result
 
-## Technology
+## Technologies
 
-* Quantum computing
-Our project we chose to work with quantum computing, a new but efficient technology, with a high precision rate.
-Quantum computing, uses quantum bits or qubits. It harnesses the unique ability of subatomic particles which allows them to 
-exist in more than one state ( 1 and a 0 at the same time).
-<p>qbits:</p>
-The basic unit of information in quantum computing.which represents the state of a quantum particle. Because of superposition, qubits can either be 1 or 0 or anything in between.
-<p>Gates:</p>
-a quantum gate is a basic quantum circuit operating on a number of qubits. They are the building blocks of quantum circuits.
-
-* Python / Django
-Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design
-
-
-## library
-- pennylane 
-PennyLane is a cross-platform Python library for quantum machine learning
--  Tensorflow
-TensorFlow is an end-to-end open source platform for machine learning.
-- datetime 
-module supplies classes for manipulating dates and times.
-- h5py
-package  to store huge amounts of numerical data, and easily manipulate that data from NumPy
-- cv2(openCv)
-
-## architecture
-![plot](Model.jpg)
+- Pennylane: Quantum Machine Learning Tool.
+- Tensorflow: Classical Machine Learning Tool.
+- OpenCv (cv2): Image Processing Tool.
+- Pandas: Data Manipulation Tool.
+- Numpy: Matrix Manipulation Tool
+- Scikit-Learn (sklearn): Classical Machine Learning Tool.
+- Matplotlib: Plotting Tool.
 
 ## Bugs
 No known bugs at this time. 
