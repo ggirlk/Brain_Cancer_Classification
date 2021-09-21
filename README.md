@@ -19,11 +19,8 @@ Our Solution is about Brain Cancer Classification that means Classifying differe
 ## Table of Content
 * [Environment](#environment)
 * [Installation](#installation)
-* [Technology](#Technology)
-* [library](#library)
-* [Architecture](#architecture)
+* [Technologies](#Technology)
 * [Bugs](#bugs)
-* [Authors](#authors)
 * [License](#license)
 
 ## Environment
