@@ -8,8 +8,6 @@ urlpatterns = [
     path("", views.home, name='home'),
     #path("success", views.success, name="success"),
     path("result/", views.result, name="result"),
-    path('MRI_image/', views.MRI_image, name='MRI')
-]
-if settings.DEBUG:
-        urlpatterns += static(settings.MEDIA_URL,
+    path('MRI_image', views.MRI_image, name='MRI')
+]+ static(settings.MEDIA_URL,
                               document_root=settings.MEDIA_ROOT)
