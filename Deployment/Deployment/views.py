@@ -75,9 +75,8 @@ def QCONV1(X, image_number, image_total, step=2):
     return out
 
 def classify(request):
-
     img = np.zeros((1, 1))
-    #imgfile = request.FILES['file'].read()
+
     if request.method == "POST":
         form = ClassifyForm(request.POST, request.FILES)
         if form.is_valid():
@@ -88,10 +87,8 @@ def classify(request):
                                  img = img
                                  )
             obj.save()
-            #imgfile.save(imgfile.name)
             img = cv2.imread("images/"+img.name, cv2.IMREAD_GRAYSCALE)
-    # obj = ImageModel.objects.create(image=request.FILES['file'])
-    # imgfile = obj.file.name
+
     if img.shape[0] < 512 and img.shape[1] < 512:
         return JsonResponse(data={"error": "image should be 512X512"})
 
@@ -108,8 +105,7 @@ def classify(request):
 
     processed = QCONV1(NorImages, 1, 1)
     images = np.asarray([processed])
-    #images = np.asarray([data["image"]])
-    #images = np.asarray([img])
+
     yhat = q_model.predict(images)
     yhat = yhat.argmax(axis=1)
     d = {
