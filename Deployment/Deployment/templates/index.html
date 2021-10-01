@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    {% load static %}
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body>
+<main>
+    <section id="home-section">
+      <h2>Classifyer</h2>
+      <div>
+          <fieldset>
+              <legend>Welcome to your space</legend>
+              <form action="classify/" method="post" enctype="multipart/form-data" id="imageForm">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                <div>
+                  <span><button name="submit">Classify</button></span>
+                </div>
+              </form>
+          </fieldset>
+          <div id="result">
+          </div>
+          
+      </div>
+    </section>
+</main>
+<script>
+    $(function() {
+        $('form').submit(function (e) {
+            e.preventDefault();
+            $("#result").html("Process ...")
+            var data = new FormData();
+            
+            data.append("csrfmiddlewaretoken", $("form :input[type='hidden']").val());
+            data.append("imgfield", $("form :input[type='file']")[0].files[0])
+
+            $.ajax({
+                url: 'classify/',
+                data: data,
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                success: function ( data ) {
+                    var types = {
+                        "1": "Meningioma",
+                        "2": "gliomar",
+                        "3": "Pituitary Tumor"
+                    }
+                    if (data['error'] != 'null')
+                        $("#result").html("<p style='color: red'>Error: "+data['error']+"</p>")
+                    else
+                        $("#result").html("<p style='color: blue'>The Tumor type is: "+types[data['yhat']]+"</p>")
+                    //console.log(data);
+                }
+            });
+
+        });
+        //console.log($("input"));
+    });
+</script>
+</body>
+</html>
