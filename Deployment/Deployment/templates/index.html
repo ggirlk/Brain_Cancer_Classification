@@ -13,6 +13,7 @@
       <div>
           <fieldset>
               <legend>Welcome to your space</legend>
+              <p>Select a brain MRI picture, required resolution: 512x512</p>
               <form action="classify/" method="post" enctype="multipart/form-data" id="imageForm">
                   {% csrf_token %}
                   {{ form.as_p }}
