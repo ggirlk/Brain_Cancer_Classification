@@ -3,7 +3,6 @@
 <head>
     <title>Home</title>
     {% load static %}
-    
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -47,7 +46,7 @@
                 success: function ( data ) {
                     var types = {
                         "1": "Meningioma",
-                        "2": "gliomar",
+                        "2": "glioma",
                         "3": "Pituitary Tumor"
                     }
                     if (data['error'] != 'null')
@@ -55,7 +54,12 @@
                     else
                         $("#result").html("<p style='color: blue'>The Tumor type is: "+types[data['yhat']]+"</p>")
                     //console.log(data);
+                },
+                error: function(error) {
+                    $("#result").html("<p style='color: red'>Error with code: "+error.status+", Please try a valid picture as discribed</p>")
+
                 }
+                
             });
 
         });

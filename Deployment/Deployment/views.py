@@ -91,27 +91,28 @@ def classify(request):
 
     if img.shape[0] < 512 and img.shape[1] < 512:
         return JsonResponse(data={"error": "image should be 512X512"})
+    if type(img)  == np.ndarray:
+        scale_percent = 25 # percent of original size
+        width = int(img.shape[1] * scale_percent / 100)
+        height = int(img.shape[0] * scale_percent / 100)
+        dim = (width, height)
 
-    scale_percent = 25 # percent of original size
-    width = int(img.shape[1] * scale_percent / 100)
-    height = int(img.shape[0] * scale_percent / 100)
-    dim = (width, height)
+        # resize image
+        resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
 
-    # resize image
-    resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
-    
-    
-    NorImages = resized/255
 
-    processed = QCONV1(NorImages, 1, 1)
-    images = np.asarray([processed])
+        NorImages = resized/255
 
-    yhat = q_model.predict(images)
-    yhat = yhat.argmax(axis=1)
-    d = {
-        "error": "null",
-        "yhat": int(yhat[0]),
-    }
+        processed = QCONV1(NorImages, 1, 1)
+        images = np.asarray([processed])
 
-    return JsonResponse(data=d)
-    
+        yhat = q_model.predict(images)
+        yhat = yhat.argmax(axis=1)
+        d = {
+            "error": "null",
+            "yhat": int(yhat[0]),
+        }
+
+        return JsonResponse(data=d)
+    else:
+        return JsonResponse(data={"error": "Please enter a valid picture and retry"})
