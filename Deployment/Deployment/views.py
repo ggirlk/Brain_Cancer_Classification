@@ -76,8 +76,7 @@ def QCONV1(X, image_number, image_total, step=2):
 
 def classify(request):
 
-    data = np.load(filedir+"/29.mat.npz")
-    img = ""
+    img = np.zeros((1, 1))
     #imgfile = request.FILES['file'].read()
     if request.method == "POST":
         form = ClassifyForm(request.POST, request.FILES)
@@ -93,6 +92,8 @@ def classify(request):
             img = cv2.imread("images/"+img.name, cv2.IMREAD_GRAYSCALE)
     # obj = ImageModel.objects.create(image=request.FILES['file'])
     # imgfile = obj.file.name
+    if img.shape[0] < 512 and img.shape[1] < 512:
+        return JsonResponse(data={"error": "image should be 512X512"})
 
     scale_percent = 25 # percent of original size
     width = int(img.shape[1] * scale_percent / 100)
@@ -102,20 +103,17 @@ def classify(request):
     # resize image
     resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
     
-    if resized.shape[0] != resized.shape[1] != 128:
-        return JsonResponse(data={"error": "image should be 512X512"})
+    
     NorImages = resized/255
 
     processed = QCONV1(NorImages, 1, 1)
     images = np.asarray([processed])
     #images = np.asarray([data["image"]])
     #images = np.asarray([img])
-    labels = data["label"]
     yhat = q_model.predict(images)
     yhat = yhat.argmax(axis=1)
     d = {
         "error": "null",
-        "label": int(labels),
         "yhat": int(yhat[0]),
     }
 
